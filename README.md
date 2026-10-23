@@ -2,6 +2,8 @@
 
 **Turn a screenshot into a runnable React component with Gemma 4.**
 
+🚀 **Live Demo:** [https://trace-ui-lens-gemma.vercel.app/](https://trace-ui-lens-gemma.vercel.app/)
+
 UI Lens is an AI-powered screenshot-to-React tool. Upload a UI screenshot, provide instructions, and generate a React + TypeScript component that you can inspect, edit, and refine.
 
 This project adapts the open-source [Trace](https://github.com/forbiddenlink/trace) codebase and integrates Gemma 4 into its screenshot-to-React generation workflow.
@@ -70,7 +72,7 @@ This project demonstrates the use of Gemma 4 in a practical application rather t
 Clone your public UI Lens repository:
 
 ```bash
-git clone YOUR_PUBLIC_UI_LENS_REPOSITORY_URL
+git clone https://github.com/darshankreddy7507/trace.git
 cd YOUR_PROJECT_DIRECTORY
 ```
 
