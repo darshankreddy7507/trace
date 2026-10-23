@@ -20,7 +20,7 @@ function App() {
         {/* Top bar: wordmark, hairline-ruled. */}
         <header className="flex items-center gap-6 px-5 h-14 border-b-hair border-line-strong bg-warm-white flex-shrink-0">
           <TraceWordmark />
-          <span className="ml-auto annotate hidden md:inline">screenshot to component</span>
+          <span className="ml-auto annotate hidden md:inline">Winmac Code</span>
         </header>
 
         {/* View */}

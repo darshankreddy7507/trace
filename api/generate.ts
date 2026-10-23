@@ -429,11 +429,6 @@ export async function generateFromScreenshot(
       schema: genSchema,
       temperature: 0.2,
       maxOutputTokens: MAX_OUTPUT_TOKENS,
-      // Bound Gemini 2.5 thinking so reasoning cannot eat the whole output
-      // budget and truncate the JSON (finishReason: 'length').
-      providerOptions: {
-        google: { thinkingConfig: { thinkingBudget: THINKING_BUDGET } },
-      },
       messages: [
         {
           role: 'user',
