@@ -16,7 +16,7 @@
  * the Vite dev middleware and the gallery build script can call it directly.
  */
 import type { VercelRequest, VercelResponse } from '@vercel/node';
-import { google } from '@ai-sdk/google';
+import { createGoogleGenerativeAI } from '@ai-sdk/google';
 import { generateObject } from 'ai';
 import { z } from 'zod';
 
@@ -412,7 +412,10 @@ export async function generateFromScreenshot(
     throw new Error('That image is too large. Please try one under 4 MB.');
   }
 
-  const modelId = process.env.GEMINI_MODEL ?? 'gemini-3.5-flash';
+  const modelId = process.env.GEMINI_MODEL ?? 'gemma-4-26b-a4b-it';
+  const google = createGoogleGenerativeAI({
+    baseURL: 'https://generativelanguage.googleapis.com/v1',
+  });
   const image = Uint8Array.from(Buffer.from(parsed.data, 'base64'));
   const mediaType = parsed.mimeType;
 
