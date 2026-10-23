@@ -356,12 +356,6 @@ const MAX_IMAGE_BYTES = 4 * 1024 * 1024;
  */
 const MAX_OUTPUT_TOKENS = 16000;
 
-/**
- * Hard cap on Gemini 2.5 "thinking" tokens per call. Enough to reason about a
- * layout, but bounded so it cannot consume the whole output budget and truncate
- * the structured JSON. Output tokens then cover the component + detections.
- */
-const THINKING_BUDGET = 2048;
 
 /** Approximate decoded byte length of a base64 string without allocating a Buffer. */
 function approxBase64Bytes(base64: string): number {
